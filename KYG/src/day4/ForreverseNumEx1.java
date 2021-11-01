@@ -10,7 +10,7 @@ public class ForreverseNumEx1 {
 		}
 	System.out.println();
 	for (i = 0 ; i < 5 ; i++ ) {
-		System.out.print(5 - 1 + " ");
+		System.out.print(5 - i + " ");
 	}
 	}
 }
