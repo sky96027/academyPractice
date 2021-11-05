@@ -8,7 +8,7 @@ public class PrintAlphabetEx2 {
 		 * abc
 		 * abcd
 		 * ...
-		 * abcd...xyz°¡ Ãâ·ÂµÇµµ·Ï ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
+		 * abcd...xyzï¿½ï¿½ ï¿½ï¿½ÂµÇµï¿½ï¿½ï¿½ ï¿½Úµå¸¦ ï¿½Û¼ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.
 		 * */
 		char ch1 = 'a';
 		char ch2 = 'a';
@@ -27,6 +27,7 @@ public class PrintAlphabetEx2 {
 			}
 			System.out.println();
 		}
+
 	}
 
 }
