@@ -17,8 +17,8 @@ public class PolymorphismEx1 {
 		h3.p.get();
 		
 	}
-	//¸Å°³º¯¼öÀÇ ´ÙÇü¼º : ¸Å°³º¯¼ö¿¡ °´Ã¼µéÀÇ °øÅëµÈ ºÎ¸ð·Î ¼³Á¤ÇÏ¿©
-	//				 ´Ù¾çÇÑ Å¬·¡½ºÀÇ °³Ã¼µéÀÌ ¿Ã ¼ö ÀÖ°Ô ÇÏ´Â°Í
+	//ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½
+	//				 ï¿½Ù¾ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½Ï´Â°ï¿½
 	public static void calling(Phone p) {
 		p.call();
 	}
@@ -38,27 +38,25 @@ class Phone {
 	public String phoneNum;
 	
 	public void call() {
-		System.out.println("ÀüÈ­¸¦ °Å´Â ÁßÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½È­ï¿½ï¿½ ï¿½Å´ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 	}
 	public void get() {
-		System.out.println("ÀüÈ­¸¦ ¹Þ´Â ÁßÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½È­ï¿½ï¿½ ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 	}
 	
 }
 
 class SmartPhone extends Phone {
 	public void touch() {
-		System.out.println("¾×Á¤À» ÅÍÄ¡Çß½À´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
 	}
 }
 class FolderPhone extends Phone {
 	public void fold() {
-		System.out.println("ÇÚµåÆùÀ» Á¢¾ú½À´Ï´Ù.");
+		System.out.println("ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 	}
 }
-class tt extends String {
-	
-}
+
 
 
 
