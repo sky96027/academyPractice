@@ -1,17 +1,20 @@
-package day16;
+package day17;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class ExbListEx3 {
+import day16.ExbStudent;
+
+public class ExaListEx1 {
 	public static void main(String[] args) {
 		/* 학생 성적을 관리하는 프로그램을 만들어 보세요.
 		 * 메뉴
 		 * 1. 학생정보 추가
 		 * 2. 전체 학생정보 출력
 		 * 3. 학생 정보 삭제 // 추가
-		 * 3. 프로그램 종료*/
+		 * 4. 학생 정보 수정
+		 * 5. 프로그램 종료*/
 		Scanner scan = new Scanner(System.in);
 		int menu = 0;
 		ArrayList<ExbStudent> stdList = new ArrayList<ExbStudent>();
