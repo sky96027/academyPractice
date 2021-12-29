@@ -67,7 +67,7 @@
             $('.btn-reset').click(function(){
                 $('.btn-start').show();
                 $('.btn-stop').hide();
-                $('.btn-stop').click();
+                clearInterval(timerId);
                 h = 0;  m = 0;  s = 0;  ms =0;
                 $('.mmm').text(addZero(ms));
                 $('.second').text(addZero(s));
