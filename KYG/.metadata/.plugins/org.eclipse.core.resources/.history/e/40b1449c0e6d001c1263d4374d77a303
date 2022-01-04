@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<h1><nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	  <!-- Brand/logo -->
+	  <a class="navbar-brand" href="/spring">HOME</a>
+	  
+	  <!-- Links -->
+	  <ul class="navbar-nav">
+	    <li class="nav-item">
+	      <a class="nav-link" href="/spring/test">test</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="/spring/test2">test2</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="/spring/test/form">데이터 전송 예제</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="/spring/test3">test3</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="/spring/login">로그인</a>
+	    </li>
+	  </ul>
+	</nav></h1>
+</body>
+</html>

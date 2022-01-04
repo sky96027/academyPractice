@@ -1,0 +1,12 @@
+1641261669862	Rename resource 'file-def.xml'
+1641262104171	Rename resource 'NewFile.jsp'
+1641262971412	Rename resource 'base_layout.jsp'
+1641262988845	Rename resource 'baselayout.jsp'
+1641263677145	Move 'baseLayout.jsp' to 'member'
+1641265131560	Move 'baseLayout.jsp' to 'layout'
+1641265423111	Move 'login.jsp' to 'member'
+1641266791009	Rename resource 'home2.jsp'
+1641266794464	Move 'home.jsp' to 'main'
+1641267922563	Delete elements
+1641268584757	Delete element
+1641280749097	Delete element
