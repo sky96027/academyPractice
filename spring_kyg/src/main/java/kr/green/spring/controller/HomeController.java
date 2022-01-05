@@ -41,12 +41,24 @@ public class HomeController {
 		mv.setViewName("/member/login");
 		return mv;
 	}
+	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	public ModelAndView signupGet(ModelAndView mv) {
+		mv.setViewName("/member/signup");
+		return mv;
+	}
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public ModelAndView signupPost(ModelAndView mv, MemberVO member) {
+		System.out.println("/signup:post : "+member);
+		memberService.signup(member);
+		mv.setViewName("/member/signup");
+		return mv;
+	}
 	
 }
 //default 접근 제한자 : 나 + 같은 패키지
-class A{
+//class A{
 	//여기서 A 클래스 호출 가능
-}
+
 
 
 

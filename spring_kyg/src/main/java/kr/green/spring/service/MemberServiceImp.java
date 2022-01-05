@@ -21,4 +21,10 @@ public class MemberServiceImp implements MemberService{
 	return null;
 	}
 
+	@Override
+	public MemberVO signup(MemberVO member) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
