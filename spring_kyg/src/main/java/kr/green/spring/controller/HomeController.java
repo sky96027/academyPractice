@@ -22,7 +22,6 @@ public class HomeController {
 	//method는 전달 방식, GET,POST, 생략하면 둘다
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView homeGet(ModelAndView mv) {
-		
 		mv.setViewName("/main/home");
 		//화면으로 데이터를 보낼때 addObject를 사용
 		//addObject("화면에서 사용할 이름", 데이터);
