@@ -70,4 +70,18 @@ public class BoardServiceImp implements BoardService {
 		boardDao.updateBoard(board);
 		*/
 	}
+
+	@Override
+	public void modifyBoard(Integer bd_num, MemberVO user, BoardVO boardmodify) {
+		if(bd_num == null || bd_num <= 0)
+			return;
+		BoardVO board = boardDao.getBoard(bd_num);
+		if(board == null)
+			return;
+		if(!board.getBd_me_id().equals(user.getMe_id()))
+			return;
+		boardDao.modifyBoard(bd_num);
+		
+		
+	}
 }
