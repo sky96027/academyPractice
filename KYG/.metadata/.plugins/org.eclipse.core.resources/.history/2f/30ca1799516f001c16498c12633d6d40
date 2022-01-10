@@ -1,0 +1,5 @@
+package kr.green.spring.Interceptor;
+
+public class LoginInterceptor {
+
+}
