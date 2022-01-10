@@ -1,5 +1,6 @@
 package kr.green.spring.vo;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,6 +10,8 @@ public class MemberVO {
 	private String me_name;
 	private String me_gender;
 	private Date me_birth;
+	private String me_address;
+	private String me_phone;
 	public String getMe_id() {
 		return me_id;
 	}
@@ -36,12 +39,13 @@ public class MemberVO {
 	public Date getMe_birth() {
 		return me_birth;
 	}
+	
 	public void setMe_birth(String me_birth) {
 		SimpleDateFormat format;
 		try {
 			format = new SimpleDateFormat("yyyy-MM-dd");
 			this.me_birth = format.parse(me_birth);
-		} catch (Exception e) {
+		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 	}
@@ -57,8 +61,6 @@ public class MemberVO {
 	public void setMe_phone(String me_phone) {
 		this.me_phone = me_phone;
 	}
-	private String me_address;
-	private String me_phone;
 	@Override
 	public String toString() {
 		return "MemberVO [me_id=" + me_id + ", me_pw=" + me_pw + ", me_name=" + me_name + ", me_gender=" + me_gender
