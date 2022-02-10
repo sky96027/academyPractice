@@ -40,8 +40,10 @@
 		class="kr.green.spring.interceptor.LoginInterceptor"></beans:bean>
 	<beans:bean id="memberInterceptor" 
 		class="kr.green.spring.interceptor.MemberInterceptor"></beans:bean>
-		<beans:bean id="guestInterceptor" 
+	<beans:bean id="guestInterceptor" 
 		class="kr.green.spring.interceptor.GuestInterceptor"></beans:bean>
+	<beans:bean id="autoLoginInterceptor" 
+		class="kr.green.spring.interceptor.AutoLoginInterceptor"></beans:bean>
 	<interceptors>
 		<!-- 등록된 인터셉터가 어떤 URL에 동작하는지를 설정  -->
 	  <interceptor>
@@ -52,6 +54,7 @@
 	    <mapping path="/board/register"/>
 	    <mapping path="/board/modify"/>
 	    <mapping path="/board/delete"/>
+	    <mapping path="/mypage"/>
 	    <beans:ref bean="memberInterceptor"/>
 	  </interceptor>
 	  <interceptor>
@@ -59,5 +62,14 @@
 	    <mapping path="/signup"/>
 	    <beans:ref bean="guestInterceptor"/>
 	  </interceptor>
+	  <interceptor>
+	    <mapping path="/**/"/>
+	    <beans:ref bean="autoLoginInterceptor"/>
+	  </interceptor>
 	</interceptors>
+	<!-- servlet-context.xml -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	    <!-- 업로드 최대 크기 10Mb -->
+	    <beans:property name="maxUploadSize" value="10485760"></beans:property>
+	</beans:bean>
 </beans:beans>

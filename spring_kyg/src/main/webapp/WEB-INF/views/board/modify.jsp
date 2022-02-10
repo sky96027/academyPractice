@@ -5,12 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="body container" action ="<%=request.getContextPath()%>/board/modify">
+	<div class="body container" >
 			<h1>게시글 수정</h1>
-			<form action="<%=request.getContextPath()%>/board/modify" method="post">
+			<form action="<%=request.getContextPath()%>/board/modify" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 				  <input type="text" class="form-control" name="bd_title" value = "${board.bd_title}">
 				</div>
@@ -18,8 +20,35 @@
 				  <textarea class="form-control" name="bd_contents" rows="10">${board.bd_contents}</textarea>
 				</div>
 				<input type = "hidden" name = "bd_num" value = "${board.bd_num}">
+				<div class = "form-group attachment">
+					<c:forEach items="${filelist}" var="file">
+						<div class="form-control">
+							<input type = "hidden" name="fileNums" value="${file.fi_num}">
+							<span>${file.fi_ori_name}</span>
+							<a class = "btn-close" href = "#">X</a>
+						</div>
+					</c:forEach>
+					<c:forEach begin="1" end="${3-filelist.size() }">
+						<input type="file" class="form-control" name ="files2">
+					</c:forEach>
+				</div>
 				<button class="btn btn-outline-success col-12">등록</button>
 			</form>
-	</div>
+			<script>
+				$(function(){
+					$('.attachment .btn-close').click(function(e){
+						e.preventDefault();
+						$(this).parent().remove();
+						var str = '<input type="file" class="form-control" name ="files2">';
+						$('.attachment').append(str);
+					});
+				});
+				$('[name=bd_contents]').summernote({
+			   		placeholder: 'Hello Bootstrap 4',
+			    	tabsize: 2,
+			    	height: 400
+			    });
+			</script>
+		</div>
 </body>
 </html>
